@@ -20,7 +20,7 @@ jobs:
               run: check.sh $(pwd) $(pwd)
 
             - name: Report banana result
-              run:
+              run:  |
                 NB_ERROR=$(cat coding-style-reports.log | wc -l)
                 if [ $NB_ERROR -gt 0 ]; then
                     ERRORS=$(cat coding-style-reports.log);
